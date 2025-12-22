@@ -1,3 +1,1 @@
-setTimeout(function () {
-  window.location.href = "home.html";
-}, 3000);
+// JS reserved for next sections (counter, slider, animations)
