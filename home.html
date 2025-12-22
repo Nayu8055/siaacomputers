@@ -1,205 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SIA Computers | Laptop & Computer Repair</title>
-
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<!-- Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
-
-body{
-  background:#0b0f1a;
-  color:#fff;
-  scroll-behavior:smooth;
-}
-
-/* Neon Button */
-.btn{
-  display:inline-block;
-  padding:12px 30px;
-  border-radius:30px;
-  color:#fff;
-  text-decoration:none;
-  background:linear-gradient(90deg,#00f2ff,#7a00ff);
-  box-shadow:0 0 20px rgba(122,0,255,0.7);
-  transition:0.3s;
-}
-.btn:hover{
-  box-shadow:0 0 35px rgba(0,242,255,1);
-  transform:scale(1.05);
-}
-
-/* Header */
-header{
-  padding:80px 20px;
-  text-align:center;
-  background:radial-gradient(circle at top,#141b3a,#0b0f1a);
-}
-
-header h1{
-  font-size:40px;
-}
-header span{
-  color:#00f2ff;
-}
-header p{
-  margin:15px 0 30px;
-  color:#aaa;
-}
-
-/* Sections */
-section{
-  padding:60px 20px;
-  max-width:1100px;
-  margin:auto;
-}
-
-.section-title{
-  text-align:center;
-  font-size:32px;
-  margin-bottom:40px;
-  color:#00f2ff;
-}
-
-/* Services */
-.services{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:20px;
-}
-
-.card{
-  background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(10px);
-  border-radius:20px;
-  padding:25px;
-  text-align:center;
-  transition:0.3s;
-  border:1px solid rgba(255,255,255,0.1);
-}
-
-.card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 0 25px rgba(0,242,255,0.3);
-}
-
-.card i{
-  font-size:40px;
-  color:#7a00ff;
-  margin-bottom:15px;
-}
-
-/* Contact */
-.contact{
-  text-align:center;
-}
-
-.contact a{
-  margin:10px;
-}
-
-/* Footer */
-footer{
-  text-align:center;
-  padding:20px;
-  color:#888;
-  border-top:1px solid rgba(255,255,255,0.1);
-}
-
-/* WhatsApp Floating */
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25d366;
-  color:#fff;
-  width:55px;
-  height:55px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:28px;
-  box-shadow:0 0 20px rgba(37,211,102,0.7);
-}
-</style>
+  <meta charset="UTF-8">
+  <title>SIAA Computers | Computer & Laptop Repair</title>
+  <link rel="stylesheet" href="home.css">
 </head>
-
 <body>
 
-<!-- HERO -->
-<header>
-  <h1><span>SIA</span> Computers</h1>
-  <p>Fast & Reliable Computer and Laptop Repair Services</p>
-  <a href="#contact" class="btn">Book Repair</a>
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="container">
+    <h1 class="brand">SIAA COMPUTERS</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<!-- SERVICES -->
-<section>
-  <h2 class="section-title">Our Services</h2>
-  <div class="services">
-    <div class="card">
-      <i class="fas fa-laptop"></i>
-      <h3>Laptop Repair</h3>
-      <p>All brands hardware & software issues fixed</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-desktop"></i>
-      <h3>Desktop Repair</h3>
-      <p>PC assembling, upgrades & troubleshooting</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-shield-virus"></i>
-      <h3>Virus Removal</h3>
-      <p>Complete system cleaning & protection</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-database"></i>
-      <h3>Data Recovery</h3>
-      <p>Recover lost or deleted important files</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-wifi"></i>
-      <h3>Network Setup</h3>
-      <p>Internet & LAN network solutions</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-keyboard"></i>
-      <h3>Cyber Café</h3>
-      <p>Browsing, printing & online services</p>
-    </div>
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-content">
+    <h2>Reliable Computer & Laptop Repair Services</h2>
+    <p>Professional repair, upgrades, and IT solutions you can trust.</p>
+    <a href="#contact" class="btn">Get Service</a>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
-  <h2 class="section-title">Contact Us</h2>
-  <p>Call or WhatsApp us for quick support</p><br>
-  <a href="tel:8796312476" class="btn">📞 Call Now</a>
-  <a href="mailto:siacomputers@gmail.com" class="btn">📧 Email</a>
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services">
+  <h2 class="section-title">Our Services</h2>
+
+  <div class="service-grid">
+    <div class="card">Computer & Laptop Repair</div>
+    <div class="card">Hardware Upgrade & Replacement</div>
+    <div class="card">OS Installation & Software Support</div>
+    <div class="card">Data Recovery & Backup</div>
+    <div class="card">Printer & Peripheral Repair</div>
+    <div class="card">AMC & IT Support</div>
+  </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  © 2025 SIA Computers | All Rights Reserved
-</footer>
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="about-box">
+    <h2>Why Choose SIAA Computers?</h2>
+    <p>
+      We provide reliable and affordable computer repair services with a focus on
+      quality, transparency, and customer satisfaction. Our experienced technicians
+      ensure your systems are back up and running quickly and securely.
+    </p>
+  </div>
+</section>
 
-<!-- WhatsApp -->
-<a href="https://wa.me/918796312476" class="whatsapp">
-  <i class="fab fa-whatsapp"></i>
-</a>
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <h2 class="section-title">Contact Us</h2>
+
+  <div class="contact-box">
+    <p><strong>📞 Phone:</strong> 9767971000</p>
+    <p><strong>📍 Location:</strong> Pune, Maharashtra</p>
+    <p><strong>⏰ Working Hours:</strong> 9 AM – 9 PM</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  © 2025 SIAA Computers. All Rights Reserved.
+</footer>
 
 </body>
 </html>
