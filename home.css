@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* ===== HEADER ===== */
+.header {
+  background: #0f2027;
+  padding: 15px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  color: #00eaff;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+/* ===== HERO ===== */
+.hero {
+  height: 70vh;
+  background: linear-gradient(135deg, #0f2027, #203a43);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  animation: fadeUp 1.5s ease;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background: #00eaff;
+  color: #000;
+  padding: 12px 28px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* ===== SECTIONS ===== */
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+
+/* ===== SERVICES ===== */
+.services {
+  padding: 70px 20px;
+  background: white;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: #f5f7fa;
+  padding: 30px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== ABOUT ===== */
+.about {
+  background: #e9eef3;
+  padding: 70px 20px;
+}
+
+.about-box {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  animation: fadeUp 1.5s ease;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  padding: 70px 20px;
+  background: white;
+}
+
+.contact-box {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  line-height: 2;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #0f2027;
+  color: #aaa;
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
