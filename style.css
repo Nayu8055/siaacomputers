@@ -1,56 +1,105 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-body {
+/* HERO SECTION */
+.hero {
+  position: relative;
   height: 100vh;
+  background: linear-gradient(
+      rgba(0,0,0,0.65),
+      rgba(0,0,0,0.65)
+    ),
+    url("https://images.unsplash.com/photo-1581091215367-59ab6b1d3c69") center/cover no-repeat;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: white;
+  padding: 0 8%;
 }
 
-.welcome-container {
-  text-align: center;
-  animation: fadeIn 1.5s ease-in-out;
+.hero-content {
+  max-width: 720px;
+  color: #fff;
+  animation: fadeUp 1.1s ease forwards;
 }
 
-.logo {
-  font-size: 42px;
-  letter-spacing: 3px;
-  animation: slideDown 1.2s ease;
+.hero h1 {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
-.tagline {
-  margin-top: 10px;
-  opacity: 0.8;
+.hero p {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 35px;
 }
 
-.loader {
-  margin: 30px auto;
-  width: 45px;
-  height: 45px;
-  border: 4px solid rgba(255,255,255,0.3);
-  border-top: 4px solid #00eaff;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+.hero-buttons {
+  display: flex;
+  gap: 15px;
 }
 
-/* Animations */
-@keyframes spin {
-  to { transform: rotate(360deg); }
+.btn {
+  padding: 14px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: 0.3s ease;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.btn.primary {
+  background: #f9c74f;
+  color: #000;
 }
 
-@keyframes slideDown {
-  from { transform: translateY(-30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+.btn.primary:hover {
+  background: #f1b800;
+}
+
+.btn.secondary {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.btn.secondary:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 6%;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: fit-content;
+  }
 }
