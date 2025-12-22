@@ -23,16 +23,16 @@ body {
   padding: 15px 0;
 }
 
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .logo {
   color: #00c6ff;
   font-weight: 600;
   letter-spacing: 1.5px;
-}
-
-.top-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 nav a {
@@ -70,13 +70,14 @@ nav a {
   text-decoration: none;
 }
 
+/* TECH BOX */
 .tech-box {
   background: #0f2027;
   color: #fff;
   padding: 25px;
 }
 
-/* TRUST */
+/* TRUST BAR */
 .trust-bar {
   background: #0f2027;
   color: #fff;
@@ -139,6 +140,24 @@ nav a {
   border: none;
 }
 
+/* TESTIMONIALS */
+.testimonials {
+  padding: 70px 0;
+  background: #ffffff;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.testimonial-grid div {
+  background: #f5f7fa;
+  padding: 25px;
+  border-left: 4px solid #0f2027;
+}
+
 /* CONTACT */
 .contact {
   background: #0f2027;
@@ -150,6 +169,19 @@ nav a {
   margin: 10px 0;
 }
 
+/* MAP */
+.map-section {
+  padding: 70px 0;
+  background: #f5f7fa;
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  margin-top: 25px;
+}
+
 /* FOOTER */
 .footer {
   background: #000;
@@ -157,4 +189,52 @@ nav a {
   text-align: center;
   padding: 12px;
   font-size: 13px;
+}
+
+/* WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 999;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  nav {
+    display: none;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .tech-box {
+    margin-top: 25px;
+  }
+
+  .trust-grid {
+    grid-template-columns: 1fr 1fr;
+    font-size: 14px;
+  }
+
+  .video-grid iframe {
+    height: 220px;
+  }
 }
