@@ -6,12 +6,11 @@
 }
 
 body {
-  background: #0f2027;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: white;
 }
 
@@ -28,14 +27,13 @@ body {
 
 .tagline {
   margin-top: 10px;
-  font-size: 16px;
   opacity: 0.8;
 }
 
 .loader {
-  margin: 30px auto 0;
-  width: 40px;
-  height: 40px;
+  margin: 30px auto;
+  width: 45px;
+  height: 45px;
   border: 4px solid rgba(255,255,255,0.3);
   border-top: 4px solid #00eaff;
   border-radius: 50%;
@@ -44,7 +42,7 @@ body {
 
 /* Animations */
 @keyframes spin {
-  100% { transform: rotate(360deg); }
+  to { transform: rotate(360deg); }
 }
 
 @keyframes fadeIn {
@@ -53,6 +51,6 @@ body {
 }
 
 @keyframes slideDown {
-  from { transform: translateY(-20px); opacity: 0; }
+  from { transform: translateY(-30px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
