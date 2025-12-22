@@ -62,10 +62,14 @@
 </div>
 
 <script>
-  setTimeout(function () {
-    window.location.href = "home.html";
-  }, 3000);
-</script>
+  if (!sessionStorage.getItem("visited")) {
+    sessionStorage.setItem("visited", "yes");
 
-</body>
-</html>
+    setTimeout(() => {
+      window.location.href = "home.html";
+    }, 3000);
+
+  } else {
+    window.location.href = "home.html";
+  }
+</script>
