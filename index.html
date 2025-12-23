@@ -2,51 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>TechFix – Computer Repair</title>
+  <title>SIAA COMPUTERS – Laptop & PC Repair Pune</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="SIAA COMPUTERS – Expert laptop & PC repair in Pirangut, Pune. Hinge, screen, motherboard chip level, SSD upgrades, virus removal, water damage & more repairs with clean, modern service experience." />
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --primary: #00c2ff;
-      --primary-dark: #0097c5;
-      --bg: #050814;
-      --bg-alt: #0a0f1f;
-      --text: #f5f7ff;
-      --muted: #a0a4c0;
-      --accent: #22c55e;
-      --danger: #fb7185;
-      --card: #0f172a;
-      --border: #1f2937;
-      --radius-lg: 18px;
-      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.45);
+      --bg: #f5f5f7;
+      --bg-soft: #ffffff;
+      --bg-strong: #0a0a0a;
+      --text-main: #111111;
+      --text-muted: #6e6e73;
+      --accent: #0071e3;
+      --accent-soft: rgba(0, 113, 227, 0.18);
+      --border-soft: #d2d2d7;
+      --shadow-soft: 0 26px 70px rgba(0, 0, 0, 0.09);
+      --radius-lg: 28px;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: radial-gradient(circle at top left, #111827 0, #020617 45%, #000 100%);
-      color: var(--text);
+      font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, system-ui, "Inter", sans-serif;
+      background: radial-gradient(circle at top, #fafafa 0, #f5f5f7 40%, #e5e5ea 100%);
+      color: var(--text-main);
       line-height: 1.6;
-      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    img { max-width: 100%; display: block; }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    a { color: inherit; text-decoration: none; }
 
-    /* Layout */
     .container {
       width: 100%;
       max-width: 1120px;
@@ -54,135 +42,136 @@
       padding: 0 1.5rem;
     }
 
+    /* Header */
     header {
       position: sticky;
       top: 0;
       z-index: 50;
-      backdrop-filter: blur(18px);
-      background: linear-gradient(to bottom, rgba(2, 6, 23, 0.92), rgba(2, 6, 23, 0.75), transparent);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+      backdrop-filter: blur(22px);
+      background: rgba(245, 245, 247, 0.88);
+      border-bottom: 1px solid rgba(210, 210, 215, 0.6);
     }
 
     .nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1rem 0;
+      height: 54px;
+      font-size: 0.85rem;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.45rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
       font-weight: 600;
-      letter-spacing: 0.03em;
+      font-size: 0.86rem;
     }
 
     .logo-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: 12px;
-      background: radial-gradient(circle at 20% 0, #4ade80, #22c55e 35%, #22d3ee 70%, #0ea5e9 100%);
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 20% 0, #ffffff, #dde9ff);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      box-shadow: 0 0 0 0.5px rgba(255,255,255,0.9), 0 8px 18px rgba(0,0,0,0.15);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 10px 30px rgba(34, 211, 238, 0.65);
-      font-size: 0.9rem;
+      font-size: 0.72rem;
+      color: #111;
     }
 
     .nav-links {
       display: flex;
-      gap: 1.5rem;
-      font-size: 0.95rem;
+      gap: 1.6rem;
+      color: #3a3a3c;
     }
 
     .nav-links a {
       position: relative;
-      color: var(--muted);
-      transition: color 0.2s ease;
+      padding-bottom: 2px;
     }
 
     .nav-links a::after {
       content: "";
       position: absolute;
       left: 0;
-      bottom: -0.4rem;
+      bottom: 0;
       width: 0;
-      height: 2px;
+      height: 1.5px;
       border-radius: 999px;
-      background: linear-gradient(to right, var(--primary), var(--accent));
+      background: var(--accent);
       transition: width 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--text);
     }
 
     .nav-links a:hover::after {
       width: 100%;
     }
 
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
     .btn {
+      border-radius: 999px;
+      padding: 0.42rem 0.9rem;
+      font-size: 0.8rem;
+      border: 0.5px solid rgba(0, 0, 0, 0.08);
+      background: rgba(255,255,255,0.9);
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 0.4rem;
-      padding: 0.7rem 1.4rem;
-      border-radius: 999px;
-      border: none;
       cursor: pointer;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-      white-space: nowrap;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-0.5px);
+      box-shadow: 0 9px 22px rgba(0,0,0,0.12);
+      background: #ffffff;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: #0b1220;
-      box-shadow: 0 14px 35px rgba(56, 189, 248, 0.5);
+      background: linear-gradient(135deg, #0071e3, #0e8ef2);
+      color: #ffffff;
+      border-color: transparent;
+      box-shadow: 0 12px 28px rgba(0, 113, 227, 0.45);
     }
 
     .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 18px 40px rgba(56, 189, 248, 0.6);
+      box-shadow: 0 16px 32px rgba(0, 113, 227, 0.55);
     }
 
     .btn-ghost {
-      background: rgba(15, 23, 42, 0.8);
-      color: var(--text);
-      border: 1px solid rgba(148, 163, 184, 0.5);
-    }
-
-    .btn-ghost:hover {
-      background: rgba(15, 23, 42, 0.98);
-    }
-
-    /* Mobile nav */
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
+      background: rgba(255,255,255,0.9);
+      color: #111111;
     }
 
     .burger {
       display: none;
-      width: 34px;
-      height: 34px;
+      width: 30px;
+      height: 30px;
       border-radius: 999px;
+      border: 0.5px solid rgba(0,0,0,0.09);
+      background: rgba(255,255,255,0.95);
       align-items: center;
       justify-content: center;
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(148, 163, 184, 0.6);
       cursor: pointer;
     }
 
     .burger span {
-      width: 18px;
-      height: 2px;
+      width: 15px;
+      height: 1.4px;
       border-radius: 999px;
-      background: #e5e7eb;
+      background: #111;
       position: relative;
+      transition: background 0.18s ease;
     }
 
     .burger span::before,
@@ -190,20 +179,15 @@
       content: "";
       position: absolute;
       left: 0;
-      width: 18px;
-      height: 2px;
+      width: 15px;
+      height: 1.4px;
       border-radius: 999px;
-      background: #e5e7eb;
-      transition: transform 0.2s ease, top 0.2s ease, opacity 0.2s ease;
+      background: #111;
+      transition: transform 0.18s ease, top 0.18s ease;
     }
 
-    .burger span::before {
-      top: -5px;
-    }
-
-    .burger span::after {
-      top: 5px;
-    }
+    .burger span::before { top: -4px; }
+    .burger span::after { top: 4px; }
 
     .burger.active span {
       background: transparent;
@@ -222,245 +206,192 @@
     .mobile-menu {
       display: none;
       flex-direction: column;
-      gap: 0.75rem;
-      padding-bottom: 1rem;
-    }
-
-    .mobile-menu a {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .mobile-menu a:hover {
-      color: var(--text);
+      gap: 0.5rem;
+      padding: 0 1.5rem 0.8rem;
+      font-size: 0.85rem;
+      color: #3a3a3c;
     }
 
     /* Hero */
-    main {
-      padding-bottom: 4rem;
-    }
+    main { padding-bottom: 4rem; }
 
     .hero {
-      padding: 2.5rem 0 2rem;
+      padding: 2.8rem 0 2.4rem;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 2.75rem;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 2.8rem;
       align-items: center;
     }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      padding: 0.15rem 0.4rem 0.15rem 0.2rem;
-      border-radius: 999px;
-      background: rgba(34, 197, 94, 0.08);
-      border: 1px solid rgba(52, 211, 153, 0.5);
-      color: #bbf7d0;
-      font-size: 0.7rem;
-      margin-bottom: 1rem;
-    }
-
-    .badge-dot {
-      width: 18px;
-      height: 18px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 0, #bbf7d0, #22c55e 40%, rgba(22, 163, 74, 0.1) 100%);
-      box-shadow: 0 0 0 6px rgba(22, 163, 74, 0.25);
+    .eyebrow {
+      font-size: 0.86rem;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
     }
 
     .hero h1 {
-      font-size: clamp(2.25rem, 4.1vw, 3.4rem);
-      line-height: 1.15;
+      font-size: clamp(2.3rem, 4vw, 3rem);
+      line-height: 1.1;
       letter-spacing: -0.04em;
-      margin-bottom: 0.9rem;
+      margin-bottom: 0.6rem;
     }
 
     .hero h1 span {
-      background: linear-gradient(135deg, #e5e7eb, #38bdf8);
+      background: linear-gradient(90deg, #111111, #3a3a3c);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
 
-    .hero p {
-      color: var(--muted);
-      max-width: 32rem;
-      font-size: 0.97rem;
-      margin-bottom: 1.5rem;
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 30rem;
+      margin-bottom: 1.3rem;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 0.8rem;
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.2rem;
     }
 
     .hero-meta {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.4rem;
-      font-size: 0.8rem;
-      color: var(--muted);
+      gap: 1.3rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
     }
 
     .hero-meta strong {
-      color: #e5e7eb;
+      color: var(--text-main);
       font-weight: 500;
     }
 
-    .hero-card {
-      border-radius: 26px;
-      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.15), transparent 55%),
-        radial-gradient(circle at 100% 0, rgba(59, 130, 246, 0.14), transparent 55%),
-        radial-gradient(circle at 50% 100%, rgba(34, 197, 94, 0.16), transparent 60%),
-        #020617;
-      padding: 1.4rem;
+    .device-showcase {
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top, #ffffff 0, #f5f5f7 40%, #e8ebf5 100%);
       box-shadow: var(--shadow-soft);
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-    }
-
-    .hero-card-inner {
-      border-radius: 20px;
-      background: rgba(15, 23, 42, 0.88);
-      padding: 1.2rem;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-    }
-
-    .status-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 1rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    .status-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.22rem 0.6rem;
-      border-radius: 999px;
-      background: rgba(22, 163, 74, 0.16);
-      color: #bbf7d0;
-      font-size: 0.7rem;
-    }
-
-    .status-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #4ade80;
-      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.3);
-    }
-
-    .device-card {
-      border-radius: 18px;
-      background: radial-gradient(circle at 30% 0, rgba(59, 130, 246, 0.45), rgba(15, 23, 42, 1) 55%);
-      padding: 1rem;
+      padding: 1.6rem;
+      border: 1px solid rgba(210, 210, 215, 0.9);
       position: relative;
       overflow: hidden;
     }
 
-    .device-header {
+    .device-top {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       font-size: 0.78rem;
-      color: #e5e7eb;
-      margin-bottom: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
     }
 
-    .device-name {
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
+    .device-top strong {
+      font-size: 0.82rem;
+      color: var(--text-main);
     }
 
-    .chip {
-      width: 26px;
-      height: 26px;
-      border-radius: 9px;
-      background: radial-gradient(circle at 30% 0, #22c55e, #38bdf8 60%, #0f172a 100%);
-      box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.75);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.55rem;
-      border: 1px solid rgba(248, 250, 252, 0.2);
-    }
-
-    .device-specs {
-      display: flex;
-      justify-content: space-between;
-      gap: 0.3rem;
-      font-size: 0.7rem;
-      color: #cbd5f5;
-      margin-bottom: 0.85rem;
-    }
-
-    .meter-row {
-      display: flex;
-      flex-direction: column;
-      gap: 0.15rem;
-      font-size: 0.7rem;
-      color: #e5e7eb;
-    }
-
-    .meter-track {
-      width: 100%;
-      height: 7px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.85);
-      overflow: hidden;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-    }
-
-    .meter-fill {
-      height: 100%;
-      width: 78%;
-      background: linear-gradient(90deg, #22c55e, #65a30d);
-      box-shadow: 0 0 20px rgba(74, 222, 128, 0.8);
-    }
-
-    .hero-floating {
-      position: absolute;
-      inset: auto 1.1rem 1rem auto;
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-      font-size: 0.7rem;
-    }
-
-    .pill {
+    .pill-status {
       display: inline-flex;
       align-items: center;
-      gap: 0.35rem;
+      gap: 0.3rem;
       border-radius: 999px;
       padding: 0.18rem 0.55rem;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      color: #e5e7eb;
-      backdrop-filter: blur(10px);
+      background: rgba(0, 113, 227, 0.08);
+      border: 1px solid rgba(0, 113, 227, 0.4);
+      color: #0071e3;
     }
 
-    .pill span {
-      font-size: 0.75rem;
-      color: #a5b4fc;
+    .pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #00c853;
+      box-shadow: 0 0 0 4px rgba(0, 200, 83, 0.3);
+    }
+
+    .device-body {
+      border-radius: 22px;
+      background: linear-gradient(145deg, #f9fafb, #e5e5ea);
+      padding: 1.1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .device-laptop {
+      border-radius: 22px;
+      border: 0.8px solid rgba(120,120,128,0.35);
+      background: radial-gradient(circle at top, #ffffff, #e5e5ea);
+      padding: 1.2rem;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+      position: relative;
+    }
+
+    .device-screen {
+      border-radius: 16px 16px 10px 10px;
+      background: radial-gradient(circle at top left, #dbeafe, #e0f2fe 40%, #0f172a 100%);
+      height: 150px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .device-screen::after {
+      content: "";
+      position: absolute;
+      inset: 14% 8% auto;
+      height: 38%;
+      border-radius: 18px;
+      background: linear-gradient(145deg, rgba(15,23,42,0.9), rgba(15,23,42,0.2));
+      box-shadow: 0 26px 52px rgba(15,23,42,0.5);
+      opacity: 0.88;
+    }
+
+    .device-glow {
+      position: absolute;
+      inset: 55% -10% -50%;
+      background: radial-gradient(circle at 50% 0, rgba(0, 113, 227, 0.5), transparent 70%);
+      opacity: 0.7;
+    }
+
+    .device-base {
+      margin-top: 0.6rem;
+      height: 12px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #d4d4d8, #f4f4f5);
+      box-shadow: 0 3px 4px rgba(0,0,0,0.18);
+    }
+
+    .floating-pill {
+      position: absolute;
+      right: 1.2rem;
+      bottom: 1.3rem;
+      border-radius: 999px;
+      padding: 0.25rem 0.75rem;
+      background: rgba(255,255,255,0.92);
+      border: 0.8px solid rgba(210,210,215,0.9);
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .floating-pill strong {
+      color: var(--text-main);
+      font-weight: 500;
     }
 
     /* Sections */
-    section {
-      padding: 3rem 0 2.2rem;
-    }
+    section { padding: 3rem 0 2.7rem; }
 
     .section-head {
       display: flex;
@@ -471,201 +402,80 @@
     }
 
     .section-title {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       letter-spacing: -0.03em;
     }
 
     .section-sub {
       font-size: 0.9rem;
-      color: var(--muted);
-      max-width: 25rem;
+      color: var(--text-muted);
+      max-width: 26rem;
     }
 
-    /* Services */
+    /* Services – organized grid */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 1.2rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
     }
 
     .service-card {
-      background: linear-gradient(to bottom right, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.85));
-      border-radius: 18px;
-      padding: 1.1rem;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.8);
-      position: relative;
-      overflow: hidden;
+      border-radius: 20px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border-soft);
+      padding: 1rem;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.04);
       transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-    }
-
-    .service-card::before {
-      content: "";
-      position: absolute;
-      inset: -40%;
-      background: radial-gradient(circle at 0 0, rgba(59, 130, 246, 0.18), transparent 55%);
-      opacity: 0;
-      transition: opacity 0.2s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
-      border-color: rgba(96, 165, 250, 0.8);
-    }
-
-    .service-card:hover::before {
-      opacity: 1;
-    }
-
-    .service-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 12px;
-      background: radial-gradient(circle at 25% 0, rgba(56, 189, 248, 0.2), rgba(56, 189, 248, 0.02));
-      border: 1px solid rgba(148, 163, 184, 0.55);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .service-title {
-      font-size: 0.98rem;
-      font-weight: 500;
-      margin-bottom: 0.35rem;
-    }
-
-    .service-desc {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-bottom: 0.5rem;
-    }
-
-    .service-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.75rem;
-      color: #9ca3af;
-    }
-
-    .tag {
-      padding: 0.1rem 0.55rem;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      font-size: 0.7rem;
-    }
-
-    /* Pricing */
-    .pricing-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 1.7rem;
-      align-items: flex-start;
-    }
-
-    .pricing-list {
-      display: grid;
-      gap: 0.8rem;
-    }
-
-    .price-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      padding: 0.8rem 0.9rem;
-      border-radius: 14px;
-      background: rgba(15, 23, 42, 0.86);
-      border: 1px solid rgba(31, 41, 55, 0.9);
-      font-size: 0.85rem;
-    }
-
-    .price-row-title {
-      font-weight: 500;
-      font-size: 0.9rem;
-    }
-
-    .price-from {
-      color: var(--muted);
-      font-size: 0.8rem;
-    }
-
-    .price-value {
-      font-weight: 600;
-      color: #e5e7eb;
-    }
-
-    .pricing-note {
-      font-size: 0.78rem;
-      color: var(--muted);
-      margin-top: 0.4rem;
-    }
-
-    .guarantee-card {
-      border-radius: 18px;
-      background: radial-gradient(circle at 0 0, rgba(16, 185, 129, 0.2), transparent 55%), #020617;
-      padding: 1.4rem 1.3rem;
-      border: 1px solid rgba(45, 212, 191, 0.5);
-      box-shadow: var(--shadow-soft);
       font-size: 0.86rem;
     }
 
-    .guarantee-title {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-weight: 500;
-      margin-bottom: 0.4rem;
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 42px rgba(0,0,0,0.09);
+      border-color: rgba(0, 113, 227, 0.4);
     }
 
-    .guarantee-title span {
+    .service-title {
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .service-tag {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      width: 22px;
-      height: 22px;
+      gap: 0.3rem;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+    }
+
+    .dot {
+      width: 5px;
+      height: 5px;
       border-radius: 999px;
-      background: rgba(16, 185, 129, 0.16);
-      border: 1px solid rgba(45, 212, 191, 0.7);
-      color: #bbf7d0;
-      font-size: 0.9rem;
-    }
-
-    .guarantee-list {
-      margin-top: 0.4rem;
-      padding-left: 1.2rem;
-      color: var(--muted);
-      font-size: 0.8rem;
-    }
-
-    .guarantee-list li {
-      margin-bottom: 0.15rem;
+      background: var(--accent);
     }
 
     /* Contact */
     .contact-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 1.7rem;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: 1.9rem;
       align-items: flex-start;
     }
 
     .contact-card {
-      border-radius: 18px;
-      background: rgba(15, 23, 42, 0.96);
-      border: 1px solid rgba(148, 163, 184, 0.45);
-      padding: 1.4rem 1.3rem;
-      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.95);
+      border-radius: var(--radius-lg);
+      background: var(--bg-soft);
+      border: 1px solid var(--border-soft);
+      padding: 1.5rem 1.4rem;
+      box-shadow: var(--shadow-soft);
     }
 
     .contact-form {
       display: grid;
-      gap: 0.8rem;
-      font-size: 0.85rem;
+      gap: 0.9rem;
+      font-size: 0.86rem;
     }
 
     .field {
@@ -675,25 +485,24 @@
 
     .field label {
       font-size: 0.78rem;
-      color: var(--muted);
+      color: var(--text-muted);
     }
 
     .field input,
     .field textarea,
     .field select {
-      background: rgba(15, 23, 42, 0.9);
       border-radius: 999px;
-      border: 1px solid rgba(31, 41, 55, 0.9);
+      border: 1px solid var(--border-soft);
       padding: 0.6rem 0.85rem;
-      color: #e5e7eb;
-      font-family: inherit;
       font-size: 0.85rem;
+      font-family: inherit;
       outline: none;
-      transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      background: #ffffff;
+      transition: box-shadow 0.16s ease, border-color 0.16s ease, transform 0.1s ease;
     }
 
     .field textarea {
-      border-radius: 14px;
+      border-radius: 16px;
       min-height: 90px;
       resize: vertical;
     }
@@ -701,32 +510,29 @@
     .field input:focus,
     .field textarea:focus,
     .field select:focus {
-      border-color: rgba(56, 189, 248, 0.95);
-      box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.7);
-      background: rgba(15, 23, 42, 0.98);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px var(--accent-soft);
+      transform: translateY(-0.5px);
     }
 
     .contact-meta {
-      font-size: 0.82rem;
-      color: var(--muted);
+      font-size: 0.78rem;
+      color: var(--text-muted);
       margin-top: 0.6rem;
-    }
-
-    .contact-meta strong {
-      color: #e5e7eb;
     }
 
     .contact-side {
       display: grid;
-      gap: 0.8rem;
-      font-size: 0.85rem;
+      gap: 1rem;
+      font-size: 0.86rem;
     }
 
     .contact-side-card {
-      border-radius: 16px;
-      background: rgba(15, 23, 42, 0.96);
-      border: 1px solid rgba(31, 41, 55, 0.9);
-      padding: 0.9rem 1rem;
+      border-radius: 18px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border-soft);
+      padding: 1rem 1.1rem;
+      box-shadow: 0 12px 26px rgba(0,0,0,0.04);
     }
 
     .contact-side-card h4 {
@@ -736,37 +542,68 @@
 
     .contact-side-card p {
       font-size: 0.8rem;
-      color: var(--muted);
+      color: var(--text-muted);
     }
 
     .contact-side-card strong {
-      color: #e5e7eb;
+      color: var(--text-main);
     }
 
+    /* Simple image strip (you can swap URLs with own images/stock later)[web:63][web:68] */
+    .image-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 1.4rem;
+    }
+
+    .image-frame {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 16px 32px rgba(0,0,0,0.08);
+      position: relative;
+      background: #000;
+      min-height: 120px;
+    }
+
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.02);
+      transition: transform 0.4s ease;
+    }
+
+    .image-frame:hover img {
+      transform: scale(1.06);
+    }
+
+    /* Footer */
     footer {
-      border-top: 1px solid rgba(31, 41, 55, 0.95);
-      padding: 1.4rem 0 2rem;
+      border-top: 1px solid rgba(210,210,215,0.8);
+      padding: 1.6rem 0 2.2rem;
       font-size: 0.78rem;
-      color: var(--muted);
-      background: rgba(2, 6, 23, 0.95);
+      color: var(--text-muted);
+      background: rgba(245,245,247,0.95);
       margin-top: 1rem;
     }
 
     .footer-inner {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 1rem;
       flex-wrap: wrap;
     }
 
     .footer-links {
       display: flex;
-      gap: 0.9rem;
+      gap: 1rem;
     }
 
     .footer-links a:hover {
-      color: #e5e7eb;
+      color: var(--text-main);
     }
 
     /* Responsive */
@@ -774,13 +611,10 @@
       .hero-grid {
         grid-template-columns: minmax(0, 1fr);
       }
-      .hero-card {
-        order: -1;
-      }
+      .device-showcase { order: -1; }
       .services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
-      .pricing-layout,
       .contact-grid {
         grid-template-columns: minmax(0, 1fr);
       }
@@ -791,23 +625,15 @@
     }
 
     @media (max-width: 720px) {
-      .nav-links {
-        display: none;
-      }
-      .burger {
-        display: inline-flex;
-      }
-      .mobile-menu {
-        display: flex;
-      }
-      .hero {
-        padding-top: 1.4rem;
-      }
+      .nav-links { display: none; }
+      .burger { display: inline-flex; }
+      .mobile-menu { display: flex; }
+      .hero { padding-top: 1.6rem; }
       .services-grid {
         grid-template-columns: minmax(0, 1fr);
       }
-      .hero-meta {
-        gap: 0.9rem;
+      .image-strip {
+        grid-template-columns: minmax(0, 1fr);
       }
     }
   </style>
@@ -817,99 +643,71 @@
   <header>
     <div class="container nav">
       <div class="logo">
-        <div class="logo-mark">TF</div>
-        <div>
-          <div>TechFix</div>
-          <small style="font-size: 0.7rem; color:#9ca3af;">Computer & Laptop Repair</small>
-        </div>
+        <div class="logo-mark">SC</div>
+        <div>SIAA COMPUTERS</div>
       </div>
+
       <nav class="nav-links">
+        <a href="#hero">Home</a>
         <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
         <a href="#contact">Contact</a>
       </nav>
+
       <div class="nav-actions">
-        <a href="tel:+919999999999" class="btn btn-ghost" style="font-size:0.82rem;">Call +91-99999-99999</a>
+        <a href="tel:+919284677822" class="btn btn-ghost">Call 9284677822</a>
         <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-          Book Repair
+          Book repair
         </button>
         <button class="burger" id="burger" aria-label="Toggle menu">
           <span></span>
         </button>
       </div>
     </div>
-    <div class="container mobile-menu" id="mobileMenu">
+    <div class="mobile-menu container" id="mobileMenu">
+      <a href="#hero">Home</a>
       <a href="#services">Services</a>
-      <a href="#pricing">Pricing</a>
       <a href="#contact">Contact</a>
     </div>
   </header>
 
   <main>
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="container hero-grid">
         <div>
-          <div class="badge">
-            <div class="badge-dot"></div>
-            <span>Same-day computer repair in your city</span>
-          </div>
-          <h1>
-            Fixing your <span>PC, laptop</span> & data before they slow you down.
-          </h1>
-          <p>
-            Certified technicians for Windows, macOS and custom PCs. Free diagnosis, transparent pricing and pickup & drop available within city limits.
+          <div class="eyebrow">Laptop & PC repair in Pirangut, Pune</div>
+          <h1>Clean, precise repairs for your <span>laptop & desktop</span>.</h1>
+          <p class="hero-sub">
+            SIAA COMPUTERS fixes hinges, screens, chip-level boards, SSD upgrades, overheating, water damage and more, with a modern, transparent service experience.
           </p>
           <div class="hero-actions">
             <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
               Book a free diagnosis
             </button>
-            <a href="#services" class="btn btn-ghost">
-              View all services
+            <a href="tel:+919284677822" class="btn btn-ghost">
+              Call now – 9284677822
             </a>
           </div>
           <div class="hero-meta">
-            <div><strong>500+ devices</strong> repaired this year</div>
-            <div><strong>No fix, no fee</strong> on most repairs</div>
+            <div><strong>Chip-level repairs</strong> for laptops & desktops</div>
+            <div><strong>No fix, no labour fee</strong> on eligible services</div>
           </div>
         </div>
 
-        <aside class="hero-card">
-          <div class="hero-card-inner">
-            <div class="status-row">
-              <span>Live repair dashboard</span>
-              <span class="status-pill"><span class="status-dot"></span> In progress</span>
+        <aside class="device-showcase">
+          <div class="device-top">
+            <span>Live system restoration · SIAA lab</span>
+            <span class="pill-status"><span class="pill-dot"></span> In progress</span>
+          </div>
+          <div class="device-body">
+            <div class="device-laptop">
+              <div class="device-screen">
+                <div class="device-glow"></div>
+              </div>
+              <div class="device-base"></div>
             </div>
-
-            <div class="device-card">
-              <div class="device-header">
-                <div class="device-name">
-                  <div class="chip">CPU</div>
-                  <span>Gaming Laptop</span>
-                </div>
-                <span style="color:#e5e7eb;font-weight:500;">Diagnostics</span>
-              </div>
-              <div class="device-specs">
-                <span>Ryzen 7 / 16 GB</span>
-                <span>NVMe SSD</span>
-                <span>RTX Graphics</span>
-              </div>
-              <div class="meter-row">
-                <span>System health</span>
-                <div class="meter-track">
-                  <div class="meter-fill"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="hero-floating">
-              <div class="pill">
-                ▲ 2x faster boot
-                <span>after SSD upgrade</span>
-              </div>
-              <div class="pill">
-                ✓ Free data backup
-              </div>
+            <div class="floating-pill">
+              <strong>SSD + cleanup</strong> · 3× faster boot
             </div>
           </div>
         </aside>
@@ -921,205 +719,112 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2 class="section-title">Repairs handled every day</h2>
+            <h2 class="section-title">Everything your system needs</h2>
             <p class="section-sub">
-              From slow laptops to dead desktops, get clean repairs with high-quality parts and clear communication at every step.
+              From small hinge fixes to full motherboard chip-level repair, SIAA COMPUTERS keeps your devices reliable and fast.
             </p>
           </div>
         </div>
+
         <div class="services-grid">
           <div class="service-card">
-            <div class="service-icon">🛠</div>
-            <h3 class="service-title">Laptop & PC repair</h3>
-            <p class="service-desc">
-              Blue screens, random shutdowns or no power issues resolved with full hardware diagnostics.
-            </p>
-            <div class="service-meta">
-              <span class="tag">Same-day slots</span>
-              <span>From ₹699</span>
-            </div>
+            <div class="service-title">Diagnostics of Laptop/PC</div>
+            <p>Deep health check for hardware, OS and performance issues before any repair starts.</p>
+            <div class="service-tag"><span class="dot"></span>Free diagnosis on most jobs</div>
           </div>
 
           <div class="service-card">
-            <div class="service-icon">⚡</div>
-            <h3 class="service-title">SSD & RAM upgrade</h3>
-            <p class="service-desc">
-              Replace slow hard drives and low memory to make old systems feel brand new.
-            </p>
-            <div class="service-meta">
-              <span class="tag">Speed boost</span>
-              <span>From ₹1,499</span>
-            </div>
+            <div class="service-title">Laptop hinge & body repair</div>
+            <p>Hinge repair, broken body and laptop fabrication work for safe, smooth opening and closing.</p>
+            <div class="service-tag"><span class="dot"></span>Structural care</div>
           </div>
 
           <div class="service-card">
-            <div class="service-icon">🦠</div>
-            <h3 class="service-title">Virus & malware cleanup</h3>
-            <p class="service-desc">
-              Deep scan, remove threats and secure your system without losing important files.
-            </p>
-            <div class="service-meta">
-              <span class="tag">Data safe</span>
-              <span>From ₹899</span>
-            </div>
+            <div class="service-title">Laptop screen replacement</div>
+            <p>High-quality screens for cracked, flickering or dead displays, aligned and calibrated neatly.</p>
+            <div class="service-tag"><span class="dot"></span><a href="https://www.recall2pc.in/laptop-screen-replacement-repair.html" target="_blank" rel="noopener">Detailed info</a></div>
           </div>
 
           <div class="service-card">
-            <div class="service-icon">💾</div>
-            <h3 class="service-title">Data recovery</h3>
-            <p class="service-desc">
-              Recover files from dead drives, accidental formats and non-booting systems.
-            </p>
-            <div class="service-meta">
-              <span class="tag">Best effort</span>
-              <span>Quote only</span>
-            </div>
+            <div class="service-title">Motherboard chip level repair</div>
+            <p>Board-level fixes for power, charging, display, booting and BSOD errors.</p>
+            <div class="service-tag"><span class="dot"></span>Advanced lab work</div>
           </div>
 
           <div class="service-card">
-            <div class="service-icon">📶</div>
-            <h3 class="service-title">Wi‑Fi & networking</h3>
-            <p class="service-desc">
-              Fix drop connections, router setup, printer sharing and home office networks.
-            </p>
-            <div class="service-meta">
-              <span class="tag">On-site</span>
-              <span>From ₹999</span>
-            </div>
+            <div class="service-title">Battery, fan & CPU cooling</div>
+            <p>Battery replacement, CPU fan replacement, fan noise fixes, overheating and auto shutdown repair.</p>
+            <div class="service-tag"><span class="dot"></span>Thermal optimization</div>
           </div>
 
           <div class="service-card">
-            <div class="service-icon">🧹</div>
-            <h3 class="service-title">Thermal service</h3>
-            <p class="service-desc">
-              Fan cleaning, new thermal paste and airflow tuning for cooler, quieter systems.
-            </p>
-            <div class="service-meta">
-              <span class="tag">Ideal for gaming</span>
-              <span>From ₹1,199</span>
-            </div>
+            <div class="service-title">SSD & hardware upgrades</div>
+            <p>Install SSDs, hard drives, RAM and other parts to fix slow performance and boot problems.</p>
+            <div class="service-tag"><span class="dot"></span>Speed & storage boost</div>
           </div>
 
           <div class="service-card">
-            <div class="service-icon">🖥</div>
-            <h3 class="service-title">Custom PC build</h3>
-            <p class="service-desc">
-              Parts consultation and full build service for editing, design and gaming rigs.
-            </p>
-            <div class="service-meta">
-              <span class="tag">By appointment</span>
-              <span>From ₹2,499</span>
-            </div>
+            <div class="service-title">LAN, Wi‑Fi & slow internet</div>
+            <p>LAN port, networking, slow internet and wireless connection setup for home & small office.</p>
+            <div class="service-tag"><span class="dot"></span>On‑site networking help</div>
           </div>
 
           <div class="service-card">
-            <div class="service-icon">🔐</div>
-            <h3 class="service-title">Backup & security</h3>
-            <p class="service-desc">
-              Cloud and local backup setup plus basic cybersecurity hardening for home and office.
-            </p>
-            <div class="service-meta">
-              <span class="tag">Preventive</span>
-              <span>From ₹1,299</span>
-            </div>
+            <div class="service-title">USB, audio & ports repair</div>
+            <p>USB port repair, no sound problems, LAN & other I/O port fixes and replacements.</p>
+            <div class="service-tag"><span class="dot"></span>Precision soldering</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-title">Water damage & cleaning</div>
+            <p>Water damaged laptop/PC service, beep sound issues and complete internal cleaning.</p>
+            <div class="service-tag"><span class="dot"></span>Best-effort recovery</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-title">OS, drivers & optimization</div>
+            <p>Fix corrupted OS installations, drivers installation, hang issues and blue screen (BSOD) errors.</p>
+            <div class="service-tag"><span class="dot"></span>System stability</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-title">Virus, malware & spyware removal</div>
+            <p>Remove infections, clean unwanted software and secure your system without losing important data.</p>
+            <div class="service-tag"><span class="dot"></span>Clean & secure</div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-title">Complete tune‑up & cleaning</div>
+            <p>Laptop cleaning service, system optimization and slow performance issue fixes for smoother usage.</p>
+            <div class="service-tag"><span class="dot"></span>Feels like new</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Pricing -->
-    <section id="pricing">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2 class="section-title">Clear, upfront pricing</h2>
-            <p class="section-sub">
-              Most issues are diagnosed within 30 minutes. You approve the final quote before any paid repair starts.
-            </p>
-          </div>
-        </div>
-
-        <div class="pricing-layout">
-          <div>
-            <div class="pricing-list">
-              <div class="price-row">
-                <div>
-                  <div class="price-row-title">Basic health check</div>
-                  <div class="price-from">Full scan + repair options</div>
-                </div>
-                <div class="price-value">Free*</div>
-              </div>
-
-              <div class="price-row">
-                <div>
-                  <div class="price-row-title">Standard software fix</div>
-                  <div class="price-from">OS errors, app crashes, updates</div>
-                </div>
-                <div class="price-value">From ₹699</div>
-              </div>
-
-              <div class="price-row">
-                <div>
-                  <div class="price-row-title">Hardware repair</div>
-                  <div class="price-from">Motherboard, power, screen, ports</div>
-                </div>
-                <div class="price-value">From ₹1,499</div>
-              </div>
-
-              <div class="price-row">
-                <div>
-                  <div class="price-row-title">Pickup & drop</div>
-                  <div class="price-from">Within 10 km radius</div>
-                </div>
-                <div class="price-value">From ₹249</div>
-              </div>
-            </div>
-            <p class="pricing-note">
-              *Free diagnosis applies to most issues. If advanced lab testing is required, you will see the charges in advance.
-            </p>
-          </div>
-
-          <aside class="guarantee-card">
-            <div class="guarantee-title">
-              <span>✓</span>
-              <div>No-surprise repair guarantee</div>
-            </div>
-            <p>
-              You always know what will be repaired, which parts are used and how much it costs before you approve the job.
-            </p>
-            <ul class="guarantee-list">
-              <li>No fix, no labour fee on eligible jobs.</li>
-              <li>Up to 90 days warranty on parts & workmanship.</li>
-              <li>Secure handling of your data and logins.</li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
+    <!-- Contact & images -->
     <section id="contact">
       <div class="container">
         <div class="section-head">
           <div>
-            <h2 class="section-title">Book your repair now</h2>
+            <h2 class="section-title">Visit or book a repair</h2>
             <p class="section-sub">
-              Share a few details about your device. You get a callback within 15 minutes during working hours.
+              Share your issue and SIAA COMPUTERS will call you back within working hours, or walk into the service center directly.
             </p>
           </div>
         </div>
 
         <div class="contact-grid">
           <div class="contact-card">
-            <form class="contact-form" onsubmit="event.preventDefault(); alert('This is a demo form. Connect it to your email or backend.');">
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Demo form – connect this to your email or backend to receive leads.');">
               <div class="field">
                 <label for="name">Full name</label>
-                <input id="name" type="text" placeholder="e.g. Rahul Patil" required />
+                <input id="name" type="text" placeholder="e.g. Your name" required />
               </div>
 
               <div class="field">
                 <label for="phone">Phone / WhatsApp</label>
-                <input id="phone" type="tel" placeholder="+91" required />
+                <input id="phone" type="tel" placeholder="9284677822" required />
               </div>
 
               <div class="field">
@@ -1128,7 +833,7 @@
                   <option value="">Select device</option>
                   <option>Laptop</option>
                   <option>Desktop PC</option>
-                  <option>MacBook / iMac</option>
+                  <option>All‑in‑one</option>
                   <option>Office network</option>
                   <option>Other</option>
                 </select>
@@ -1136,7 +841,7 @@
 
               <div class="field">
                 <label for="issue">What seems to be the issue?</label>
-                <textarea id="issue" placeholder="Example: Laptop not turning on after power cut..." required></textarea>
+                <textarea id="issue" placeholder="Example: Laptop shows blue screen and auto shutdown after 10 minutes..." required></textarea>
               </div>
 
               <div class="field">
@@ -1144,36 +849,51 @@
                 <input id="time" type="text" placeholder="Today, 4–7 PM" />
               </div>
 
-              <button class="btn btn-primary" type="submit">Request callback</button>
+              <button class="btn btn-primary" type="submit">Request a callback</button>
             </form>
             <p class="contact-meta">
-              By submitting this form, you agree to be contacted on call or WhatsApp for your service request.
+              By submitting, you agree to be contacted via call or WhatsApp about your service request.
             </p>
           </div>
 
           <div class="contact-side">
             <div class="contact-side-card">
-              <h4>Visit the service center</h4>
+              <h4>Service center address</h4>
               <p>
-                <strong>TechFix Computers</strong><br />
-                Near Main Chowk, Pimpri, Pune – 411018<br />
-                Mon–Sat, 10:00 AM – 8:00 PM
+                <strong>SIAA COMPUTERS</strong><br />
+                Shop No. 01, Avdhut Complex,<br />
+                Above Santkrupa Hospital,<br />
+                Lavale, Mulshi, Pirangut,<br />
+                Pune, Maharashtra 412115
               </p>
             </div>
 
             <div class="contact-side-card">
-              <h4>Quick contact</h4>
+              <h4>Contact</h4>
               <p>
-                Call / WhatsApp: <strong>+91-99999-99999</strong><br />
-                Email: <strong>support@techfix.in</strong>
+                Phone / WhatsApp: <strong>9284677822</strong><br />
+                Call for directions, on‑site visits and urgent repairs.
               </p>
             </div>
 
             <div class="contact-side-card">
-              <h4>Service areas</h4>
+              <h4>Service highlight</h4>
               <p>
-                Pimpri–Chinchwad, Nigdi, Chikhali, Wakad, Hinjewadi and nearby locations. On-site visits available for homes and small offices.
+                Special focus on laptop hinge, panel and motherboard chip-level repair, along with SSD installations and slow system fix.
               </p>
+            </div>
+
+            <!-- Image strip with sample stock URLs; replace with your own images later[web:63][web:68] -->
+            <div class="image-strip">
+              <div class="image-frame">
+                <img src="https://images.pexels.com/photos/4705613/pexels-photo-4705613.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Technician repairing laptop" />
+              </div>
+              <div class="image-frame">
+                <img src="https://images.pexels.com/photos/3825581/pexels-photo-3825581.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Close-up of computer motherboard repair" />
+              </div>
+              <div class="image-frame">
+                <img src="https://images.pexels.com/photos/4709375/pexels-photo-4709375.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Engineer replacing laptop components" />
+              </div>
             </div>
           </div>
         </div>
@@ -1183,26 +903,24 @@
 
   <footer>
     <div class="container footer-inner">
-      <span>© <span id="year"></span> TechFix. All rights reserved.</span>
+      <span>© <span id="year"></span> SIAA COMPUTERS. All rights reserved.</span>
       <div class="footer-links">
+        <a href="#hero">Home</a>
         <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
   </footer>
 
   <script>
-    // Mobile menu toggle
     const burger = document.getElementById("burger");
     const mobileMenu = document.getElementById("mobileMenu");
     burger.addEventListener("click", () => {
       burger.classList.toggle("active");
-      mobileMenu.style.display =
-        mobileMenu.style.display === "flex" ? "none" : "flex";
+      const isOpen = mobileMenu.style.display === "flex";
+      mobileMenu.style.display = isOpen ? "none" : "flex";
     });
 
-    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
