@@ -259,20 +259,47 @@
       color: #3a3a3c;
     }
 
-    /* Hero with slider */
     main { padding-bottom: 4rem; }
 
+    /* ========== UNIQUE SIAA HOME / HERO ========== */
     .hero {
       padding: 2.8rem 0 2.4rem;
     }
 
-    .hero-grid {
+    .siaa-hero-shell {
+      border-radius: 32px;
+      background: var(--bg-soft);
+      box-shadow:
+        0 26px 70px rgba(0,0,0,0.08),
+        0 0 0 1px rgba(210,210,215,0.9);
+      padding: 1.4rem 1.6rem 1.7rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .siaa-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border-radius: 999px;
+      padding: 0.2rem 0.8rem;
+      background: rgba(0,0,0,0.04);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.8rem;
+    }
+    .siaa-pill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #00c853;
+      box-shadow: 0 0 0 4px rgba(0,200,83,0.25);
+    }
+    .siaa-hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 2.5rem;
+      grid-template-columns: minmax(0,1.1fr) minmax(0,1.1fr);
+      gap: 1.8rem;
       align-items: center;
     }
-
     .eyebrow {
       font-size: 0.86rem;
       color: var(--accent);
@@ -280,146 +307,182 @@
       text-transform: uppercase;
       margin-bottom: 0.6rem;
     }
-
-    .hero h1 {
+    .siaa-heading {
       font-size: clamp(2.3rem, 4vw, 3rem);
       line-height: 1.1;
       letter-spacing: -0.04em;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.5rem;
     }
-
-    .hero h1 span {
+    .siaa-heading span {
       background: linear-gradient(90deg, #111111, #3a3a3c);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
-
-    .hero-sub {
-      font-size: 1rem;
+    .siaa-sub {
+      font-size: 0.98rem;
       color: var(--text-muted);
       max-width: 30rem;
-      margin-bottom: 1.3rem;
+      margin-bottom: 1.1rem;
     }
-
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 0.8rem;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
     }
-
-    .hero-meta {
+    .siaa-meta-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.3rem;
-      font-size: 0.82rem;
+      gap: 0.9rem;
+      font-size: 0.8rem;
       color: var(--text-muted);
+      margin-top: 0.8rem;
     }
-
-    .hero-meta strong {
+    .siaa-meta-row strong {
       color: var(--text-main);
       font-weight: 500;
     }
 
-    /* Slider */
-    .slider-shell {
-      border-radius: var(--radius-lg);
-      background: var(--bg-soft);
-      box-shadow: var(--shadow-soft);
-      padding: 1.6rem;
-      border: 1px solid rgba(210, 210, 215, 0.9);
+    .siaa-desktop {
+      border-radius: 26px;
+      background: radial-gradient(circle at top, #ffffff 0, #f5f5f7 45%, #e5e5ea 100%);
+      border: 1px solid rgba(210,210,215,0.9);
+      box-shadow: 0 22px 60px rgba(0,0,0,0.12);
+      padding: 0.9rem 1rem 1.1rem;
       position: relative;
-      overflow: hidden;
     }
-
-    .slider-window {
-      position: relative;
-      border-radius: 22px;
-      overflow: hidden;
-      height: 260px;
-      background: #000;
-    }
-
-    .slide {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      transition: opacity 0.6s ease;
+    .siaa-desktop-top {
       display: flex;
-      align-items: stretch;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      margin-bottom: 0.7rem;
     }
-
-    .slide.active {
-      opacity: 1;
+    .siaa-desktop-dots {
+      display: flex;
+      gap: 0.3rem;
     }
-
-    .slide-image {
-      flex: 1.2;
-      position: relative;
-      overflow: hidden;
+    .siaa-desktop-dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #ff5f57;
     }
+    .siaa-desktop-dots span:nth-child(2) { background: #febc2e; }
+    .siaa-desktop-dots span:nth-child(3) { background: #28c840; }
 
-    .slide-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transform: scale(1.04);
-      transition: transform 1.4s ease;
-    }
-
-    .slide.active .slide-image img {
-      transform: scale(1.08);
-    }
-
-    .slide-info {
-      flex: 1;
-      background: linear-gradient(145deg, rgba(15,23,42,0.98), rgba(15,23,42,0.75));
+    .siaa-desktop-main {
+      border-radius: 22px;
+      background: linear-gradient(135deg, #020617, #111827);
       color: #f9fafb;
-      padding: 1.2rem 1.4rem;
+      display: grid;
+      grid-template-columns: minmax(0,1.1fr) minmax(0,1fr);
+      overflow: hidden;
+      min-height: 210px;
+    }
+    .siaa-desktop-left {
+      padding: 1.2rem 1.3rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 0.4rem;
+      gap: 0.5rem;
     }
-
-    .slide-info h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.1rem;
+    .siaa-desktop-left h3 {
+      font-size: 1.02rem;
     }
-
-    .slide-info p {
-      font-size: 0.85rem;
+    .siaa-desktop-left p {
+      font-size: 0.82rem;
       color: #e5e7eb;
     }
-
-    .slide-tag {
-      font-size: 0.75rem;
-      color: #a5b4fc;
-    }
-
-    .slider-dots {
+    .siaa-desktop-badges {
       display: flex;
+      flex-wrap: wrap;
       gap: 0.4rem;
-      margin-top: 0.8rem;
-      justify-content: center;
+      margin-top: 0.4rem;
+      font-size: 0.75rem;
+    }
+    .siaa-chip {
+      border-radius: 999px;
+      padding: 0.16rem 0.65rem;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.7);
+      color: #c7d2fe;
     }
 
-    .dot-btn {
-      width: 7px;
+    .siaa-desktop-right {
+      position: relative;
+      overflow: hidden;
+    }
+    .siaa-desktop-right::before {
+      content: "";
+      position: absolute;
+      inset: -20%;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(37,99,235,0.75), transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(16,185,129,0.65), transparent 60%);
+      opacity: 0.9;
+    }
+    .siaa-device-shell {
+      position: relative;
+      max-width: 230px;
+      margin: 1.6rem auto 0;
+    }
+    .siaa-device-screen {
+      border-radius: 20px;
+      background: radial-gradient(circle at top left, #dbeafe, #0f172a);
+      height: 140px;
+      box-shadow: 0 22px 46px rgba(0,0,0,0.55);
+      position: relative;
+      overflow: hidden;
+    }
+    .siaa-device-glow {
+      position: absolute;
+      inset: 18% 10% auto;
+      height: 40%;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(15,23,42,0.1), rgba(15,23,42,0.95));
+    }
+    .siaa-device-bar {
+      position: absolute;
+      inset: 62% 14% auto;
       height: 7px;
       border-radius: 999px;
-      border: none;
-      padding: 0;
-      background: rgba(148,163,184,0.7);
-      cursor: pointer;
-      transition: background 0.2s ease, transform 0.2s ease, width 0.2s ease;
+      background: rgba(15,23,42,0.7);
+      overflow: hidden;
     }
-
-    .dot-btn.active {
-      background: #0071e3;
-      width: 14px;
-      transform: translateY(-1px);
+    .siaa-device-bar-fill {
+      width: 70%;
+      height: 100%;
+      background: linear-gradient(90deg, #22c55e, #a3e635);
+      box-shadow: 0 0 16px rgba(34,197,94,0.8);
+    }
+    .siaa-device-base {
+      margin: 0.6rem auto 0;
+      height: 10px;
+      width: 70%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #d4d4d8, #f4f4f5);
+      box-shadow: 0 3px 5px rgba(0,0,0,0.25);
+    }
+    .siaa-float-card {
+      position: absolute;
+      right: 1.1rem;
+      bottom: 1.2rem;
+      border-radius: 999px;
+      padding: 0.2rem 0.7rem;
+      background: rgba(15,23,42,0.95);
+      border: 1px solid rgba(148,163,184,0.8);
+      color: #e5e7eb;
+      font-size: 0.72rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      box-shadow: 0 12px 26px rgba(0,0,0,0.5);
+    }
+    .siaa-float-card span {
+      color: #a5b4fc;
     }
 
     /* Sections */
@@ -639,10 +702,9 @@
 
     /* Responsive */
     @media (max-width: 960px) {
-      .hero-grid {
-        grid-template-columns: minmax(0, 1fr);
+      .siaa-hero-grid {
+        grid-template-columns: minmax(0,1fr);
       }
-      .slider-shell { order: -1; }
       .services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -666,17 +728,8 @@
       .image-strip {
         grid-template-columns: minmax(0, 1fr);
       }
-      .slider-window {
-        height: 320px;
-      }
-      .slide {
-        flex-direction: column;
-      }
-      .slide-image {
-        height: 55%;
-      }
-      .slide-info {
-        height: 45%;
+      .siaa-desktop-main {
+        grid-template-columns: minmax(0,1fr);
       }
     }
   </style>
@@ -722,80 +775,77 @@
   </header>
 
   <main>
-    <!-- Hero with slider -->
+    <!-- UNIQUE HOME / HERO -->
     <section class="hero" id="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">Laptop & PC repair in Pirangut, Pune</div>
-          <h1>Clean, precise repairs for your <span>laptop & desktop</span>.</h1>
-          <p class="hero-sub">
-            SIAA COMPUTERS fixes hinges, screens, chip-level boards, SSD upgrades, overheating, water damage and more, with a modern, transparent service experience.
-          </p>
-          <div class="hero-actions">
-            <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-              Book a free diagnosis
-            </button>
-            <a href="tel:+919284677822" class="btn btn-ghost">
-              Call now – 9284677822
-            </a>
+      <div class="container">
+        <div class="siaa-hero-shell">
+          <div class="siaa-pill">
+            <span class="siaa-pill-dot"></span>
+            <span>SIAA OS / Service Experience 1.0</span>
           </div>
-          <div class="hero-meta">
-            <div><strong>Chip-level repairs</strong> for laptops & desktops</div>
-            <div><strong>No fix, no labour fee</strong> on eligible services</div>
-          </div>
-        </div>
 
-        <aside class="slider-shell">
-          <div class="slider-window" id="sliderWindow">
-            <!-- Slide 1 -->
-            <div class="slide active">
-              <div class="slide-image">
-                <img src="https://images.pexels.com/photos/4705613/pexels-photo-4705613.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Technician repairing laptop hinge and screen" />
+          <div class="siaa-hero-grid">
+            <div>
+              <div class="eyebrow">SIAA COMPUTERS · Pirangut, Pune</div>
+              <h1 class="siaa-heading">
+                The <span>cleanest way</span> to repair your laptop or PC.
+              </h1>
+              <p class="siaa-sub">
+                Book a repair like launching an app. SIAA COMPUTERS handles hinges, screens, chip-level boards, SSDs, overheating, water damage and more, with updates at every step.
+              </p>
+              <div class="hero-actions">
+                <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+                  Get my device fixed
+                </button>
+                <a href="#services" class="btn btn-ghost">
+                  See what we repair
+                </a>
               </div>
-              <div class="slide-info">
-                <div class="slide-tag">Hinge · Screen · Body</div>
-                <h3>Bring broken laptops back to life.</h3>
-                <p>
-                  Hinge repair, broken body and screen replacement done carefully so your laptop feels solid and premium again.
-                </p>
+              <div class="siaa-meta-row">
+                <div><strong>Designed for Pirangut</strong> – local, fast and detail‑focused service.</div>
+                <div><strong>From hinge to chip</strong> – one place for all laptop & PC issues.</div>
               </div>
             </div>
 
-            <!-- Slide 2 -->
-            <div class="slide">
-              <div class="slide-image">
-                <img src="https://images.pexels.com/photos/3825581/pexels-photo-3825581.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Motherboard diagnostics and chip-level repair" />
+            <div class="siaa-desktop">
+              <div class="siaa-desktop-top">
+                <div class="siaa-desktop-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <span>SIAA Service Desktop</span>
               </div>
-              <div class="slide-info">
-                <div class="slide-tag">Chip-level · Diagnostics</div>
-                <h3>Fix the problem at the source.</h3>
-                <p>
-                  Motherboard chip-level repair, power and boot issues solved with professional tools and clean soldering.
-                </p>
+
+              <div class="siaa-desktop-main">
+                <div class="siaa-desktop-left">
+                  <h3>SIAA Repair Session · Today</h3>
+                  <p>
+                    Plug in your device, describe the issue once and let the SIAA workflow handle diagnostics, repair and optimization.
+                  </p>
+                  <div class="siaa-desktop-badges">
+                    <div class="siaa-chip">Hinge · Screen · Body</div>
+                    <div class="siaa-chip">Chip‑level board repair</div>
+                    <div class="siaa-chip">SSD + OS optimization</div>
+                  </div>
+                </div>
+                <div class="siaa-desktop-right">
+                  <div class="siaa-device-shell">
+                    <div class="siaa-device-screen">
+                      <div class="siaa-device-glow"></div>
+                      <div class="siaa-device-bar">
+                        <div class="siaa-device-bar-fill"></div>
+                      </div>
+                    </div>
+                    <div class="siaa-device-base"></div>
+                  </div>
+                  <div class="siaa-float-card">
+                    + <strong>3× faster boot</strong>
+                    <span>after SIAA care</span>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <!-- Slide 3 -->
-            <div class="slide">
-              <div class="slide-image">
-                <img src="https://images.pexels.com/photos/4709375/pexels-photo-4709375.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Technician installing SSD and optimizing system" />
-              </div>
-              <div class="slide-info">
-                <div class="slide-tag">SSD · Cleaning · OS</div>
-                <h3>Slow system to lightning fast.</h3>
-                <p>
-                  SSD installation, full cleaning and OS optimization so your PC boots and loads apps in seconds.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="slider-dots">
-            <button class="dot-btn active" data-slide="0"></button>
-            <button class="dot-btn" data-slide="1"></button>
-            <button class="dot-btn" data-slide="2"></button>
-          </div>
-        </aside>
+          </div> <!-- /siaa-hero-grid -->
+        </div> <!-- /siaa-hero-shell -->
       </div>
     </section>
 
@@ -1000,7 +1050,7 @@
   </footer>
 
   <script>
-    // Loading overlay logic[web:78][web:88]
+    // Loading overlay[web:118]
     window.addEventListener("load", () => {
       const overlay = document.getElementById("loadingOverlay");
       overlay.style.opacity = "0";
@@ -1020,49 +1070,6 @@
 
     // Year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Simple slider with dots[web:73][web:77]
-    const slides = document.querySelectorAll(".slide");
-    const dots = document.querySelectorAll(".dot-btn");
-    let currentSlide = 0;
-    let sliderInterval = null;
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle("active", i === index);
-      });
-      dots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === index);
-      });
-      currentSlide = index;
-    }
-
-    function nextSlide() {
-      const next = (currentSlide + 1) % slides.length;
-      showSlide(next);
-    }
-
-    function startSlider() {
-      sliderInterval = setInterval(nextSlide, 5000);
-    }
-
-    function stopSlider() {
-      if (sliderInterval) clearInterval(sliderInterval);
-    }
-
-    dots.forEach((dot) => {
-      dot.addEventListener("click", () => {
-        stopSlider();
-        const index = parseInt(dot.getAttribute("data-slide"), 10);
-        showSlide(index);
-        startSlider();
-      });
-    });
-
-    // Start slider after slight delay so page feels smooth
-    window.addEventListener("load", () => {
-      startSlider();
-    });
   </script>
 </body>
 </html>
