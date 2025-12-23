@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>SIAA COMPUTERS – Laptop & PC Repair Pune</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="SIAA COMPUTERS – Expert laptop & PC repair in Pirangut, Pune. Hinge, screen, motherboard chip level, SSD upgrades, virus removal, water damage & more repairs with clean, modern service experience." />
+  <meta name="description" content="SIAA COMPUTERS – Expert laptop & PC repair in Pirangut, Pune. Hinge, screen, motherboard chip level, SSD upgrades, virus removal, water damage & more repairs with a clean, modern service experience." />
   <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -40,6 +40,53 @@
       max-width: 1120px;
       margin: 0 auto;
       padding: 0 1.5rem;
+    }
+
+    /* Loading overlay */
+    .loading-overlay {
+      position: fixed;
+      inset: 0;
+      background: #f5f5f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.6s ease;
+    }
+
+    .loader-logo {
+      width: 72px;
+      height: 72px;
+      border-radius: 24px;
+      background: radial-gradient(circle at 20% 0, #ffffff, #dde9ff);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.9),
+        0 0 0 10px rgba(0, 113, 227, 0.06),
+        0 18px 38px rgba(0,0,0,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .loader-logo span {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+    }
+
+    .loader-ring {
+      position: absolute;
+      inset: 8px;
+      border-radius: 22px;
+      border: 1.5px solid rgba(0,113,227,0.18);
+      border-top-color: #0071e3;
+      animation: spin 1.2s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
     }
 
     /* Header */
@@ -212,7 +259,7 @@
       color: #3a3a3c;
     }
 
-    /* Hero */
+    /* Hero with slider */
     main { padding-bottom: 4rem; }
 
     .hero {
@@ -222,7 +269,7 @@
     .hero-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 2.8rem;
+      gap: 2.5rem;
       align-items: center;
     }
 
@@ -275,9 +322,10 @@
       font-weight: 500;
     }
 
-    .device-showcase {
+    /* Slider */
+    .slider-shell {
       border-radius: var(--radius-lg);
-      background: radial-gradient(circle at top, #ffffff 0, #f5f5f7 40%, #e8ebf5 100%);
+      background: var(--bg-soft);
       box-shadow: var(--shadow-soft);
       padding: 1.6rem;
       border: 1px solid rgba(210, 210, 215, 0.9);
@@ -285,109 +333,93 @@
       overflow: hidden;
     }
 
-    .device-top {
+    .slider-window {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      height: 260px;
+      background: #000;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.6s ease;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      margin-bottom: 1rem;
+      align-items: stretch;
     }
 
-    .device-top strong {
-      font-size: 0.82rem;
-      color: var(--text-main);
+    .slide.active {
+      opacity: 1;
     }
 
-    .pill-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      border-radius: 999px;
-      padding: 0.18rem 0.55rem;
-      background: rgba(0, 113, 227, 0.08);
-      border: 1px solid rgba(0, 113, 227, 0.4);
-      color: #0071e3;
-    }
-
-    .pill-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: #00c853;
-      box-shadow: 0 0 0 4px rgba(0, 200, 83, 0.3);
-    }
-
-    .device-body {
-      border-radius: 22px;
-      background: linear-gradient(145deg, #f9fafb, #e5e5ea);
-      padding: 1.1rem;
+    .slide-image {
+      flex: 1.2;
       position: relative;
       overflow: hidden;
     }
 
-    .device-laptop {
-      border-radius: 22px;
-      border: 0.8px solid rgba(120,120,128,0.35);
-      background: radial-gradient(circle at top, #ffffff, #e5e5ea);
-      padding: 1.2rem;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.12);
-      position: relative;
+    .slide-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.04);
+      transition: transform 1.4s ease;
     }
 
-    .device-screen {
-      border-radius: 16px 16px 10px 10px;
-      background: radial-gradient(circle at top left, #dbeafe, #e0f2fe 40%, #0f172a 100%);
-      height: 150px;
-      position: relative;
-      overflow: hidden;
+    .slide.active .slide-image img {
+      transform: scale(1.08);
     }
 
-    .device-screen::after {
-      content: "";
-      position: absolute;
-      inset: 14% 8% auto;
-      height: 38%;
-      border-radius: 18px;
-      background: linear-gradient(145deg, rgba(15,23,42,0.9), rgba(15,23,42,0.2));
-      box-shadow: 0 26px 52px rgba(15,23,42,0.5);
-      opacity: 0.88;
+    .slide-info {
+      flex: 1;
+      background: linear-gradient(145deg, rgba(15,23,42,0.98), rgba(15,23,42,0.75));
+      color: #f9fafb;
+      padding: 1.2rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.4rem;
     }
 
-    .device-glow {
-      position: absolute;
-      inset: 55% -10% -50%;
-      background: radial-gradient(circle at 50% 0, rgba(0, 113, 227, 0.5), transparent 70%);
-      opacity: 0.7;
+    .slide-info h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.1rem;
     }
 
-    .device-base {
-      margin-top: 0.6rem;
-      height: 12px;
+    .slide-info p {
+      font-size: 0.85rem;
+      color: #e5e7eb;
+    }
+
+    .slide-tag {
+      font-size: 0.75rem;
+      color: #a5b4fc;
+    }
+
+    .slider-dots {
+      display: flex;
+      gap: 0.4rem;
+      margin-top: 0.8rem;
+      justify-content: center;
+    }
+
+    .dot-btn {
+      width: 7px;
+      height: 7px;
       border-radius: 999px;
-      background: linear-gradient(90deg, #d4d4d8, #f4f4f5);
-      box-shadow: 0 3px 4px rgba(0,0,0,0.18);
+      border: none;
+      padding: 0;
+      background: rgba(148,163,184,0.7);
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease, width 0.2s ease;
     }
 
-    .floating-pill {
-      position: absolute;
-      right: 1.2rem;
-      bottom: 1.3rem;
-      border-radius: 999px;
-      padding: 0.25rem 0.75rem;
-      background: rgba(255,255,255,0.92);
-      border: 0.8px solid rgba(210,210,215,0.9);
-      font-size: 0.74rem;
-      color: var(--text-muted);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.14);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
-
-    .floating-pill strong {
-      color: var(--text-main);
-      font-weight: 500;
+    .dot-btn.active {
+      background: #0071e3;
+      width: 14px;
+      transform: translateY(-1px);
     }
 
     /* Sections */
@@ -412,7 +444,7 @@
       max-width: 26rem;
     }
 
-    /* Services – organized grid */
+    /* Services grid */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -549,7 +581,6 @@
       color: var(--text-main);
     }
 
-    /* Simple image strip (you can swap URLs with own images/stock later)[web:63][web:68] */
     .image-strip {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -611,7 +642,7 @@
       .hero-grid {
         grid-template-columns: minmax(0, 1fr);
       }
-      .device-showcase { order: -1; }
+      .slider-shell { order: -1; }
       .services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -635,10 +666,30 @@
       .image-strip {
         grid-template-columns: minmax(0, 1fr);
       }
+      .slider-window {
+        height: 320px;
+      }
+      .slide {
+        flex-direction: column;
+      }
+      .slide-image {
+        height: 55%;
+      }
+      .slide-info {
+        height: 45%;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Loading overlay -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loader-logo">
+      <div class="loader-ring"></div>
+      <span>SC</span>
+    </div>
+  </div>
+
   <!-- Header -->
   <header>
     <div class="container nav">
@@ -671,7 +722,7 @@
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- Hero with slider -->
     <section class="hero" id="hero">
       <div class="container hero-grid">
         <div>
@@ -694,21 +745,55 @@
           </div>
         </div>
 
-        <aside class="device-showcase">
-          <div class="device-top">
-            <span>Live system restoration · SIAA lab</span>
-            <span class="pill-status"><span class="pill-dot"></span> In progress</span>
-          </div>
-          <div class="device-body">
-            <div class="device-laptop">
-              <div class="device-screen">
-                <div class="device-glow"></div>
+        <aside class="slider-shell">
+          <div class="slider-window" id="sliderWindow">
+            <!-- Slide 1 -->
+            <div class="slide active">
+              <div class="slide-image">
+                <img src="https://images.pexels.com/photos/4705613/pexels-photo-4705613.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Technician repairing laptop hinge and screen" />
               </div>
-              <div class="device-base"></div>
+              <div class="slide-info">
+                <div class="slide-tag">Hinge · Screen · Body</div>
+                <h3>Bring broken laptops back to life.</h3>
+                <p>
+                  Hinge repair, broken body and screen replacement done carefully so your laptop feels solid and premium again.
+                </p>
+              </div>
             </div>
-            <div class="floating-pill">
-              <strong>SSD + cleanup</strong> · 3× faster boot
+
+            <!-- Slide 2 -->
+            <div class="slide">
+              <div class="slide-image">
+                <img src="https://images.pexels.com/photos/3825581/pexels-photo-3825581.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Motherboard diagnostics and chip-level repair" />
+              </div>
+              <div class="slide-info">
+                <div class="slide-tag">Chip-level · Diagnostics</div>
+                <h3>Fix the problem at the source.</h3>
+                <p>
+                  Motherboard chip-level repair, power and boot issues solved with professional tools and clean soldering.
+                </p>
+              </div>
             </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+              <div class="slide-image">
+                <img src="https://images.pexels.com/photos/4709375/pexels-photo-4709375.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Technician installing SSD and optimizing system" />
+              </div>
+              <div class="slide-info">
+                <div class="slide-tag">SSD · Cleaning · OS</div>
+                <h3>Slow system to lightning fast.</h3>
+                <p>
+                  SSD installation, full cleaning and OS optimization so your PC boots and loads apps in seconds.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-dots">
+            <button class="dot-btn active" data-slide="0"></button>
+            <button class="dot-btn" data-slide="1"></button>
+            <button class="dot-btn" data-slide="2"></button>
           </div>
         </aside>
       </div>
@@ -735,25 +820,28 @@
 
           <div class="service-card">
             <div class="service-title">Laptop hinge & body repair</div>
-            <p>Hinge repair, broken body and laptop fabrication work for safe, smooth opening and closing.</p>
+            <p>Laptop hinge repair, broken body and fabrication work for safe, smooth opening and closing.</p>
             <div class="service-tag"><span class="dot"></span>Structural care</div>
           </div>
 
           <div class="service-card">
             <div class="service-title">Laptop screen replacement</div>
             <p>High-quality screens for cracked, flickering or dead displays, aligned and calibrated neatly.</p>
-            <div class="service-tag"><span class="dot"></span><a href="https://www.recall2pc.in/laptop-screen-replacement-repair.html" target="_blank" rel="noopener">Detailed info</a></div>
+            <div class="service-tag">
+              <span class="dot"></span>
+              <a href="https://www.recall2pc.in/laptop-screen-replacement-repair.html" target="_blank" rel="noopener">Detailed info</a>
+            </div>
           </div>
 
           <div class="service-card">
             <div class="service-title">Motherboard chip level repair</div>
-            <p>Board-level fixes for power, charging, display, booting and BSOD errors.</p>
+            <p>Board-level fixes for power, charging, display, booting, BSOD and no display issues.</p>
             <div class="service-tag"><span class="dot"></span>Advanced lab work</div>
           </div>
 
           <div class="service-card">
-            <div class="service-title">Battery, fan & CPU cooling</div>
-            <p>Battery replacement, CPU fan replacement, fan noise fixes, overheating and auto shutdown repair.</p>
+            <div class="service-title">Battery, fan & cooling</div>
+            <p>Battery replacement, CPU fan replacement, fan noise fixes and overheating or auto shutdown repair.</p>
             <div class="service-tag"><span class="dot"></span>Thermal optimization</div>
           </div>
 
@@ -765,12 +853,12 @@
 
           <div class="service-card">
             <div class="service-title">LAN, Wi‑Fi & slow internet</div>
-            <p>LAN port, networking, slow internet and wireless connection setup for home & small office.</p>
+            <p>LAN port repair, networking, slow internet and wireless connection setup for home & small office.</p>
             <div class="service-tag"><span class="dot"></span>On‑site networking help</div>
           </div>
 
           <div class="service-card">
-            <div class="service-title">USB, audio & ports repair</div>
+            <div class="service-title">USB, sound & ports</div>
             <p>USB port repair, no sound problems, LAN & other I/O port fixes and replacements.</p>
             <div class="service-tag"><span class="dot"></span>Precision soldering</div>
           </div>
@@ -783,7 +871,7 @@
 
           <div class="service-card">
             <div class="service-title">OS, drivers & optimization</div>
-            <p>Fix corrupted OS installations, drivers installation, hang issues and blue screen (BSOD) errors.</p>
+            <p>Fix corrupted OS, drivers installation, hang issues, booting problems and blue screen (BSOD) errors.</p>
             <div class="service-tag"><span class="dot"></span>System stability</div>
           </div>
 
@@ -795,7 +883,7 @@
 
           <div class="service-card">
             <div class="service-title">Complete tune‑up & cleaning</div>
-            <p>Laptop cleaning service, system optimization and slow performance issue fixes for smoother usage.</p>
+            <p>Laptop cleaning service, system optimization and slow performance fixes for smoother daily use.</p>
             <div class="service-tag"><span class="dot"></span>Feels like new</div>
           </div>
         </div>
@@ -879,11 +967,10 @@
             <div class="contact-side-card">
               <h4>Service highlight</h4>
               <p>
-                Special focus on laptop hinge, panel and motherboard chip-level repair, along with SSD installations and slow system fix.
+                Special focus on laptop hinge, panel and motherboard chip-level repair, along with SSD installations and slow system optimization.
               </p>
             </div>
 
-            <!-- Image strip with sample stock URLs; replace with your own images later[web:63][web:68] -->
             <div class="image-strip">
               <div class="image-frame">
                 <img src="https://images.pexels.com/photos/4705613/pexels-photo-4705613.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Technician repairing laptop" />
@@ -913,6 +1000,16 @@
   </footer>
 
   <script>
+    // Loading overlay logic[web:78][web:88]
+    window.addEventListener("load", () => {
+      const overlay = document.getElementById("loadingOverlay");
+      overlay.style.opacity = "0";
+      setTimeout(() => {
+        overlay.style.display = "none";
+      }, 600);
+    });
+
+    // Mobile menu
     const burger = document.getElementById("burger");
     const mobileMenu = document.getElementById("mobileMenu");
     burger.addEventListener("click", () => {
@@ -921,7 +1018,51 @@
       mobileMenu.style.display = isOpen ? "none" : "flex";
     });
 
+    // Year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Simple slider with dots[web:73][web:77]
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot-btn");
+    let currentSlide = 0;
+    let sliderInterval = null;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      const next = (currentSlide + 1) % slides.length;
+      showSlide(next);
+    }
+
+    function startSlider() {
+      sliderInterval = setInterval(nextSlide, 5000);
+    }
+
+    function stopSlider() {
+      if (sliderInterval) clearInterval(sliderInterval);
+    }
+
+    dots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        stopSlider();
+        const index = parseInt(dot.getAttribute("data-slide"), 10);
+        showSlide(index);
+        startSlider();
+      });
+    });
+
+    // Start slider after slight delay so page feels smooth
+    window.addEventListener("load", () => {
+      startSlider();
+    });
   </script>
 </body>
 </html>
